@@ -1,4 +1,3 @@
-
 class MarvelService {
 
     _apiBase = 'https://gateway.marvel.com:443/v1/public/';
@@ -26,9 +25,6 @@ class MarvelService {
 
 
     _transformCharacter = (char) => {
-        if (char.thumbnail.path === 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available') {
-            
-        }
         return {
             name: char.name,
             description: char.description ? `${char.description.slice(0, 210)}...` : 'There is no description for this character',
